@@ -2,12 +2,6 @@ package br.usjt.deswebmob.filmeapp;
 
 import java.util.ArrayList;
 
-/*
-    @Author Wellington Shiniti Kawashima
-            RA: 81622278
-
- */
-
 public class Genero {
     private int id;
     private String nome;

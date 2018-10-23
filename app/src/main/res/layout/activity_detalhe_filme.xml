@@ -9,30 +9,62 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/txtTitulo"/>
+        android:id="@+id/txtTitulo"
+        android:gravity="center"
+        android:textSize="18dp"
+        android:layout_marginTop="25dp" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@color/colorAccent"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="10dp" />
+
+    <TextView
+        android:id="@+id/txtId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"/>
+
+    <TextView
+        android:id="@+id/txtDescricao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/fab_margin"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp" />
+
+    <TextView
+        android:id="@+id/txtDirecao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/fab_margin"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp" />
+
+    <TextView
+        android:id="@+id/txtPopularidade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/fab_margin"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp" />
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/txtDescricao"/>
+        android:id="@+id/txtData"
+        android:textSize="@dimen/fab_margin"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"/>
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/txtDirecao"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/txtData"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/txtPopularidade"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/txtId"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/txtGenero"/>
+        android:id="@+id/txtGenero"
+        android:textSize="@dimen/fab_margin"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"/>
 
 </LinearLayout>

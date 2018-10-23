@@ -12,13 +12,6 @@ import android.view.MenuItem;
 import android.widget.AdapterView;
 import android.widget.Spinner;
 
-
-/*
-    @Author Wellington Shiniti Kawashima
-            RA: 81622278
-
- */
-
 public class MainActivity extends AppCompatActivity {
 
     Spinner spinnerGenero;

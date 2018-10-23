@@ -12,13 +12,6 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 
-
-/*
-    @Author Wellington Shiniti Kawashima
-            RA: 81622278
-
- */
-
 public class ListaFilmesActivity extends AppCompatActivity {
 
     public static final String FILME = "br.usjt.deswebmob.filmeapp.filme";
@@ -31,11 +24,13 @@ public class ListaFilmesActivity extends AppCompatActivity {
         setContentView(R.layout.activity_lista_filmes);
         activity = this;
         filme = new Filme();
+
         Intent intent = getIntent();
         String genero = intent.getStringExtra(MainActivity.CHAVE);
         ListView listView = findViewById(R.id.lista_filme);
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, filme.getListaNomes(genero));
+        FilmeArrayAdapter adapter = new FilmeArrayAdapter(this, filme.getFilmesPorGenero(genero));
+        //ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, filme.getListaNomes(genero));
         //Acima é onde o Adapter pega as informações para jogar na tela, e abaixo, é onde ele já está colocando na view
         listView.setAdapter(adapter);
 

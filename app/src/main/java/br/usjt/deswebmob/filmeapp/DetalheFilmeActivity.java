@@ -6,12 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
 
-
-/*
-    @Author Wellington Shiniti Kawashima
-            RA: 81622278
-
- */
+import org.w3c.dom.Text;
 
 public class DetalheFilmeActivity extends AppCompatActivity {
     TextView id, titulo, descricao, direcao, popularidade, data, genero;
@@ -22,7 +17,6 @@ public class DetalheFilmeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_detalhe_filme);
 
         //filme
-
         id = findViewById(R.id.txtId);
         titulo = findViewById(R.id.txtTitulo);
         descricao = findViewById(R.id.txtDescricao);

@@ -2,13 +2,6 @@ package br.usjt.deswebmob.filmeapp;
 
 import java.util.ArrayList;
 
-
-/*
-    @Author Wellington Shiniti Kawashima
-            RA: 81622278
-
- */
-
 public class Filme {
 
     private String titulo;
@@ -18,6 +11,7 @@ public class Filme {
     private int popularidade;
     private String direcao;
     private Genero genero;
+    private String iconName;
     private ArrayList<Filme> list = new ArrayList<>();
 
     public String getTitulo() {
@@ -76,6 +70,14 @@ public class Filme {
         this.genero = genero;
     }
 
+    public String getIconName() {
+        return iconName;
+    }
+
+    public void setIconName(String iconName) {
+        this.iconName= iconName;
+    }
+
     public ArrayList<Filme> getList() {
         return list;
     }
@@ -88,7 +90,7 @@ public class Filme {
         setList(gerarLista());
     }
 
-    public Filme(String titulo, String descricao, int id, String data, int popularidade, String direcao, Genero genero) {
+    public Filme(String titulo, String descricao, int id, String data, int popularidade, String direcao, Genero genero, String iconName) {
         this.titulo = titulo;
         this.descricao = descricao;
         this.id = id;
@@ -96,12 +98,13 @@ public class Filme {
         this.popularidade = popularidade;
         this.direcao = direcao;
         this.genero = genero;
+        this.iconName = iconName;
     }
 
     public ArrayList<Filme> gerarLista(){
-        Filme f1 = new Filme("Halloween","Filme de terror de um assassino", 1, "20/11/1993", 842, "Fulano", new Genero(3, "Terror"));
+        Filme f1 = new Filme("Halloween","Filme de terror de um assassino", 1, "20/11/1993", 842, "Fulano", new Genero(3, "Terror"), "image.png");
         getList().add(f1);
-        Filme f2 = new Filme("Wonder Woman", "Simplesmente Mulher Maravilha", 2, "15/04/2018", 999, "Fulaninho", new Genero(2,"Ação"));
+        Filme f2 = new Filme("Wonder Woman", "Simplesmente Mulher Maravilha", 2, "15/04/2018", 999, "Fulaninho", new Genero(2,"Ação"), "image.png");
         getList().add(f2);
         return list;
     }
@@ -129,6 +132,20 @@ public class Filme {
                 return filme;
         }
         return null;
+    }
+
+    public ArrayList<Filme> getFilmesPorGenero(String genero){
+        ArrayList<Filme> lista = new ArrayList<Filme>();
+        setList(gerarLista());
+        for (Filme filme: list) {
+            if(genero.equals("Todos"))
+                lista.add(filme);
+
+            if(filme.getGenero().getNome().equals(genero))
+                lista.add(filme);
+        }
+
+        return lista;
     }
 
     @Override
